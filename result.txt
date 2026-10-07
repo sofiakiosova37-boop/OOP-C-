@@ -1,0 +1,4 @@
+=== result calcus ===
+1 num: 2
+2 num: 56
+sum: 58
