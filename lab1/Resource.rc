@@ -1,0 +1,42 @@
+#include <windows.h>
+#include "resource.h"
+
+MYMENU MENU
+BEGIN
+    POPUP "Лабораторна 1"
+    BEGIN
+        MENUITEM "Робота1", IDM_WORK1
+        MENUITEM "Робота2", IDM_WORK2
+    END
+END
+
+IDD_WORK1 DIALOGEX 0, 0, 200, 100
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Вариант 1 - Ползунок"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    CONTROL "", IDC_SLIDER, "msctls_trackbar32", TBS_AUTOTICKS | WS_TABSTOP, 20, 20, 160, 25
+    PUSHBUTTON "Так", IDOK, 30, 60, 60, 20
+    PUSHBUTTON "Відміна", IDCANCEL, 110, 60, 60, 20
+END
+
+IDD_WORK2_1 DIALOGEX 0, 0, 180, 90
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Вариант 2 - Окно 1"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    LTEXT "Перше вікно", -1, 30, 20, 120, 15
+    PUSHBUTTON "Далі >", IDC_NEXT, 20, 50, 65, 20
+    PUSHBUTTON "Відміна", IDCANCEL, 95, 50, 65, 20
+END
+
+IDD_WORK2_2 DIALOGEX 0, 0, 200, 90
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Вариант 2 - Окно 2"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    LTEXT "Друге діалогове вікно", -1, 40, 20, 120, 15"
+    PUSHBUTTON "< Назад", IDC_BACK, 15, 50, 50, 20
+    PUSHBUTTON "Так", IDOK2, 75, 50, 50, 20
+    PUSHBUTTON "Відміна", IDCANCEL3, 135, 50, 50, 20
+END
